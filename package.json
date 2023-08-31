@@ -5,12 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd src && http-server",
-    "build": "run-script-os",
-    "build:win32": "npm-run-all buildwin:*",
-    "build:darwin:linux": "npm-run-all buildunix:*",
-    "buildwin:ts": "del /F /Q built-site && tsc -p ./src/tsconfig.json --outDir ./built-site",
-    "buildunix:ts": "rm -f built-site && tsc -p ./src/tsconfig.json --outDir ./built-site"
+    "start": "cd built-site && http-server",
+    "build": "node ./build/build.js"
   },
   "keywords": [],
   "author": "",
