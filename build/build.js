@@ -12,7 +12,7 @@ execSync('tsc -p ./src/tsconfig.json --outDir ./built-site', function callback(e
 });
 
 // Copy html files
-fs.cp("./src/", "./built-site", {
+fs.cp("src/", "built-site", {
     filter(src, dest) {
         return src.includes(".html") || src.includes(".css") || !src.includes(".");
     },
