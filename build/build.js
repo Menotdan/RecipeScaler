@@ -1,8 +1,9 @@
 const { execSync } = require('child_process');
 var fs = require('fs')
+var fse = require('fs-extra')
 
 // Clear old directories.
-fs.rmSync("built-site", { recursive: true, force: true });
+fse.emptyDirSync("./built-site");
 
 // Compile typescript and print any errors.
 execSync('tsc -p ./src/tsconfig.json --outDir ./built-site', function callback(error, stdout, stderr) {

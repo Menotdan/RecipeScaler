@@ -1,0 +1,26 @@
+body {
+    color: white;
+    background-color: rgb(39, 39, 39);
+}
+
+input {
+    color: white;
+    background-color: rgb(39, 39, 39);
+
+    width: 25%;
+}
+
+textarea {
+    color: white;
+    background-color: rgb(39, 39, 39);
+}
+
+label {
+    font-size: large;
+    margin-right: 8px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+}
