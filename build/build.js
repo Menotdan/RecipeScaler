@@ -1,11 +1,11 @@
-var exec = require('child_process').exec;
+const { execSync } = require('child_process');
 var fs = require('fs')
 
 // Clear old directories.
 fs.rmSync("built-site", { recursive: true, force: true });
 
 // Compile typescript and print any errors.
-exec('tsc -p ./src/tsconfig.json --outDir ./built-site', function callback(error, stdout, stderr) {
+execSync('tsc -p ./src/tsconfig.json --outDir ./built-site', function callback(error, stdout, stderr) {
   console.log(stderr);
   console.log(stdout);
 });
