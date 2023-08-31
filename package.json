@@ -1,0 +1,24 @@
+{
+  "name": "recipe-scaler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd src && http-server",
+    "build": "run-script-os",
+    "build:win32": "npm-run-all buildwin:*",
+    "build:darwin:linux": "npm-run-all buildunix:*",
+    "buildwin:ts": "del /F /Q built-site && tsc -p ./src/tsconfig.json --outDir ./built-site",
+    "buildunix:ts": "rm -f built-site && tsc -p ./src/tsconfig.json --outDir ./built-site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "run-script-os": "^1.1.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
