@@ -11,12 +11,43 @@ textarea {
     resize: none;
 }
 
-label {
+h1 {
+    margin-bottom: 0%;
+    text-shadow: 1.5px 1.5px 2px #000000;
+
+    width: 100%;
+    text-align: center;
+}
+
+hr {
+    margin-top: 8px;
+    margin-bottom: 5%;
+}
+
+p {
     font-size: large;
+    margin-bottom: 2%;
+
+    text-align: center;
+}
+
+label {
+    font-size: 18pt;
     margin-right: 3%;
 }
 
+#content {
+    width: fit-content;
+    margin: auto;
+}
+
+#recipe-area {
+    width: fit-content;
+}
+
 .section {
+    width:fit-content;
+    margin: auto;
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
 }
