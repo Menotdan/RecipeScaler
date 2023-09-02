@@ -40,6 +40,7 @@ p {
     width: fit-content;
     display: grid;
     grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 85% 15%;
 }
 
 #recipe-area label {
@@ -55,6 +56,28 @@ p {
 #recipe-area textarea {
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+#scale-button {
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 16px;
+    height: 100%;
+
+    background-color: #1c3e60;
+    color: white;
+    border: 2px solid #24507d;
+}
+
+#scale-button:hover {
+    background-color: #24507d;
+}
+
+#scale-button:active {
+    background-color: #28598a;
 }
 
 .section {
